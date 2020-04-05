@@ -3,7 +3,7 @@ from api.engine import init, terminate
 import asyncio
 import logging
 from api import periodic
-from api.routes import routes
+from api.routes import routes, middleware
 from api.settings import Settings, SettingsDev, build_pg_url
 
 logging.basicConfig()
@@ -19,7 +19,7 @@ def create_app(settings: Settings, debug=False) -> Starlette:
     """Application factory
     setup: routes, database(engine, create tables), periodic background task"""
     database_url = build_pg_url(settings)
-    app = Starlette(debug=debug, routes=routes,
+    app = Starlette(debug=debug, routes=routes, middleware=middleware,
                     on_startup=[init(database_url), lambda: background_task(settings)],
                     on_shutdown=[terminate]
                     )
