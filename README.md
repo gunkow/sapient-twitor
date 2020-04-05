@@ -40,11 +40,14 @@ Prefer to raise independent periodic background tasks separately from api micros
 -------------
 **TODO:**
 - tests
+- linter
 - fetch {by given period}
 - postgres bulk insert
 - deploy with nginx
 - Redis cache (especially for select distinct tweets part)
 
+![](shots/shot_swagger.png)
+![](shots/shot_radon.png)
 
    
 
