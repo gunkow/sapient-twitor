@@ -3,7 +3,7 @@
 **architecture details:**<br/>
 *Starlette* framework app, *gino* orm, *postgres* db, uvicorn
 
-####Requirements:<br/>
+**Requirements:**<br/>
 
 docker --version <br/>
 `Docker version 19.03.5, build 633a0ea` <br/>
@@ -49,5 +49,5 @@ Prefer to raise independent periodic background tasks separately from api micros
 ![](shots/shot_swagger.png)
 ![](shots/shot_radon.png)
 
-   
+   https://github.com/gunkow/sapient-twitor/blob/master/shots/shot.png
 
